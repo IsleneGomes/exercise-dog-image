@@ -24,17 +24,16 @@ class App extends React.Component {
   render() {
     if (this.fetchDog === '') return ('loading...')
     return (
-      <div>
-        <h1>My List Of Dogs</h1>
-        <section>
-          <img src={this.state.data.message} alt="Dogs" />
+      <div className="container">
+        <h1 className="title">My List Of Dogs</h1>
+        <section className="image">
+          <img src={this.state.data.message} alt="Dogs" height="340px"/>
         </section>
-        <button type="button" onClick={this.fetchDog}>Next</button>
+        <br></br>
+        <button className="button" type="button" onClick={this.fetchDog}>Next</button>
       </div>
     );
-
-    }
-  
+  } 
 }
 
 export default App;
